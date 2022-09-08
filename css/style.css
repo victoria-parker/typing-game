@@ -1,0 +1,65 @@
+/* Quick reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BASE STYLE */
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-family:'Courier New', Courier, monospace;
+}
+
+/* ADDITIONAL STYLES */
+h1{
+    margin-top: 2rem;
+    text-transform: uppercase;
+}
+h3{
+    font-weight: 400;
+}
+h4{
+    border: 1px dashed black;
+    font-weight: 400;
+    padding: .5rem;
+}
+span{
+    display: inline-block;
+    width: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+button{
+    background-color: #FEEAE3;
+    font-family: 'Courier New', Courier, monospace;
+    border: 1px solid black;
+    padding: .5rem;
+    cursor: pointer;
+    border-radius: .25rem;
+    box-shadow: .1rem .1rem .1rem rgba(0, 0, 0, .5);
+}
+blockquote{
+    padding: 1rem;
+    text-align: justify;
+}
+
+
+
+
+/* MEDIA SCREEN */
+@media screen and (min-width:980px){
+    blockquote{
+        width: 50%;
+    }
+    textarea{
+        width: 50%;
+        height: 250px;
+        border: 2px solid #FEEAE3;
+        resize: none;
+    }
+}
