@@ -1,29 +1,30 @@
-/* 
-Hacer un array con lo que esta en el blockquote
+/* TIMER SETUP*/
 
-Hacer un array con lo que esta en el input cuando termina el tiempo
-
-hacer una function que compare los arrays
-
-hacer una funcion que devuelva el puntaje en un alert y reemplace el texto del h4 con el resultado
-
-Hacer una funcion que controle el tiempo para el juego y que llame al resto de las funciones
-*/
+let currentTime=10
+let timeLeft=document.getElementById('timeLeft')
+let playBtn=document.getElementById('playBtn')
 
 
-
-
+playBtn.addEventListener('click',startTimer)
 
 function startTimer(){
+    
+    playBtn.disabled=true;
+    
+    timeLeft.innerText=currentTime;
+       
+    let timerId=setInterval(()=>{
+        
+        currentTime--;
+        timeLeft.innerText=currentTime
 
+        if(currentTime === 0){
+            clearInterval(timerId)
+        }
+    },1000)
 }
 
 
-
-
-
-
-document.getElementById('playBtn').addEventListener('click',startTimer)
 
 /*     if(!timer){
         timer=function(){
